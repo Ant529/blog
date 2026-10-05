@@ -1,0 +1,333 @@
+/* ============================================================
+   文章详情页样式 · post.css
+   ------------------------------------------------------------
+   依赖：style.css（同一目录，需先引入）
+   作用：只覆盖/新增文章正文相关样式，复用全站设计令牌
+   目录
+   01. 文章容器与头部
+   02. 正文排版（长文阅读优化）
+   03. 文内元素：引用、代码、图片、列表、表格
+   04. 文章尾部：标签、作者卡、上下篇
+   ============================================================ */
+
+
+/* ============================================================
+   01. 文章容器与头部
+   ============================================================ */
+.article{
+  max-width: 720px;      /* 单栏阅读宽度，约 70 个中文字符 */
+  margin: 0 auto;
+  padding: 52px 0 80px;
+}
+
+/* 返回首页 */
+.article__back{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 30px;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+  transition: color .15s ease;
+}
+.article__back:hover{ color: var(--accent); }
+
+/* 文章头部 */
+.article__header{
+  padding-bottom: 28px;
+  margin-bottom: 36px;
+  border-bottom: 1px solid var(--line);
+}
+
+.article__title{
+  font-family: var(--serif);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.32;
+  letter-spacing: -.4px;
+  margin: 14px 0 16px;
+}
+
+.article__meta{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-size: var(--fs-sm);
+  color: var(--ink-3);
+}
+.article__meta .dotsep{ opacity: .45; }
+
+
+/* ============================================================
+   02. 正文排版（长文阅读优化）
+   ------------------------------------------------------------
+   正文直接写在 .article__body 里，无需给每个标签加类名。
+   ============================================================ */
+.article__body{
+  font-size: 16.5px;
+  line-height: 1.9;
+  color: #2e2b27;
+}
+
+/* 段落 */
+.article__body p{
+  margin: 0 0 22px;
+}
+
+/* 小标题 */
+.article__body h2{
+  font-family: var(--serif);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 44px 0 18px;
+  letter-spacing: -.2px;
+}
+.article__body h3{
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 34px 0 14px;
+}
+
+/* 小标题前的短横线装饰 */
+.article__body h2::before{
+  content: "";
+  display: block;
+  width: 28px;
+  height: 3px;
+  margin-bottom: 14px;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+/* 链接 */
+.article__body a{
+  color: var(--accent);
+  border-bottom: 1px solid rgba(180,85,45,.35);
+  transition: border-color .15s ease;
+}
+.article__body a:hover{
+  border-bottom-color: var(--accent);
+}
+
+/* 强调 */
+.article__body strong{ font-weight: 700; color: var(--ink); }
+.article__body em{ font-style: italic; }
+
+
+/* ============================================================
+   03. 文内元素
+   ============================================================ */
+
+/* 列表 */
+.article__body ul,
+.article__body ol{
+  margin: 0 0 22px;
+  padding-left: 26px;
+}
+.article__body li{
+  margin-bottom: 9px;
+  padding-left: 4px;
+}
+.article__body li::marker{
+  color: var(--accent);
+}
+
+/* 引用块 */
+.article__body blockquote{
+  margin: 28px 0;
+  padding: 4px 0 4px 22px;
+  border-left: 3px solid var(--accent);
+  color: var(--ink-2);
+  font-family: var(--serif);
+  font-size: 17px;
+  font-style: italic;
+}
+.article__body blockquote p:last-child{ margin-bottom: 0; }
+
+/* 行内代码 */
+.article__body code{
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: var(--accent-soft);
+  color: #96431f;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .88em;
+}
+
+/* 代码块 */
+.article__body pre{
+  margin: 26px 0;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: #2b2926;
+  color: #e8e4dd;
+  overflow-x: auto;
+  font-size: 13.5px;
+  line-height: 1.7;
+}
+.article__body pre code{
+  padding: 0;
+  background: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* 图片 */
+.article__body img{
+  width: 100%;
+  margin: 30px 0;
+  border-radius: var(--radius-sm);
+}
+
+/* 图注 */
+.article__body figcaption,
+.article__body .caption{
+  margin-top: -18px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--ink-3);
+}
+
+/* 表格 */
+.article__body table{
+  width: 100%;
+  margin: 28px 0;
+  border-collapse: collapse;
+  font-size: 14.5px;
+}
+.article__body th,
+.article__body td{
+  padding: 11px 14px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+}
+.article__body th{
+  background: var(--surface-2);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: .5px;
+  color: var(--ink-2);
+}
+
+/* 分隔线 */
+.article__body hr{
+  height: 1px;
+  margin: 40px 0;
+  border: none;
+  background: var(--line);
+}
+
+
+/* ============================================================
+   04. 文章尾部
+   ============================================================ */
+
+/* 标签行 */
+.article__tags{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+.article__tags a{
+  padding: 4px 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  color: var(--ink-2);
+  font-size: 12.5px;
+  transition: all .15s ease;
+}
+.article__tags a:hover{
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* 作者卡 */
+.author-box{
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  margin-top: 28px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.author-box__avatar{
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #e8ded4, #cfb9a5);
+  color: #7a5f45;
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 700;
+}
+.author-box__name{
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.author-box__desc{
+  margin: 0;
+  font-size: var(--fs-sm);
+  line-height: 1.65;
+  color: var(--ink-2);
+}
+
+/* 上一篇 / 下一篇 */
+.post-nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 36px;
+}
+.post-nav__item{
+  display: block;
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  transition: all .18s ease;
+}
+.post-nav__item:hover{
+  border-color: var(--accent);
+  box-shadow: var(--shadow-sm);
+}
+.post-nav__label{
+  display: block;
+  margin-bottom: 6px;
+  font-size: 11.5px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.post-nav__title{
+  font-size: 14.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.post-nav__item--next{ text-align: right; }
+
+
+/* ============================================================
+   05. 响应式
+   ============================================================ */
+@media (max-width: 720px){
+  .article{ padding: 34px 0 60px; }
+  .article__title{ font-size: 27px; }
+  .article__body{ font-size: 16px; line-height: 1.85; }
+  .article__body h2{ font-size: 21px; margin-top: 36px; }
+  .post-nav{ grid-template-columns: 1fr; }
+  .post-nav__item--next{ text-align: left; }
+}

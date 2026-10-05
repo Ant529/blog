@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>归档 · Ant</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<style>
+  /* 归档页专属：年份分组 + 时间轴 */
+  .archive{
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 52px 0 80px;
+  }
+  .archive__title{
+    font-family: var(--serif);
+    font-size: 34px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  .archive__desc{
+    color: var(--ink-2);
+    margin-bottom: 46px;
+  }
+  .archive__year{
+    font-family: var(--serif);
+    font-size: 21px;
+    font-weight: 700;
+    color: var(--ink-3);
+    margin: 40px 0 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .archive__year:first-of-type{ margin-top: 0; }
+
+  .archive-list{ list-style: none; margin: 0; padding: 0; }
+  .archive-list li{
+    display: grid;
+    grid-template-columns: 92px minmax(0, 1fr);
+    gap: 18px;
+    align-items: baseline;
+    padding: 11px 0;
+  }
+  .archive-list time{
+    font-size: var(--fs-sm);
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+  .archive-list a{
+    font-size: 16px;
+    font-weight: 500;
+    transition: color .15s ease;
+  }
+  .archive-list a:hover{ color: var(--accent); }
+
+  @media (max-width: 560px){
+    .archive{ padding: 34px 0 60px; }
+    .archive__title{ font-size: 26px; }
+    .archive-list li{ grid-template-columns: 1fr; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="logo" href="index.html">
+      <span class="logo__mark">A</span>Ant
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">首页</a>
+      <a href="archive.html" class="is-active">归档</a>
+      <a href="#">关于</a>
+      <a href="#">订阅</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="btn" type="button">RSS</button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="archive">
+
+    <h1 class="archive__title">全部文章</h1>
+    <p class="archive__desc">共 4 篇，按时间倒序排列。</p>
+
+    <h2 class="archive__year">2026</h2>
+    <ul class="archive-list">
+      <li>
+        <time datetime="2026-09-22">09 月 22 日</time>
+        <a href="content/an-xin-pin-de-tou-30-tian.html">一个新品上线的头 30 天，我在盯哪五个数</a>
+      </li>
+      <li>
+        <time datetime="2026-09-15">09 月 15 日</time>
+        <a href="content/zhou-bao-zuo-cheng-yi-zhang-biao.html">把周报做成一张表，而不是一篇作文</a>
+      </li>
+      <li>
+        <time datetime="2026-09-08">09 月 08 日</time>
+        <a href="content/zhao-ren-xian-kan-shu-zi.html">招人时，我先看简历里有没有“数字”</a>
+      </li>
+      <li>
+        <time datetime="2026-09-01">09 月 01 日</time>
+        <a href="content/gong-ju-shi-fang-da-qi.html">工具是放大器，不是替代品</a>
+      </li>
+    </ul>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>© 2026 Ant · 用 HTML 和 CSS 手写</div>
+    <nav class="site-footer__nav">
+      <a href="#">关于</a><a href="archive.html">归档</a><a href="#">RSS</a><a href="#">联系</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
