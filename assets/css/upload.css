@@ -428,3 +428,69 @@
   .game-grid{ grid-template-columns: 1fr; }
   .about{ margin-top: 50px; }
 }
+
+
+/* ============================================================
+   09. 封面图 + 发行商品牌（GOBAgame）
+   ============================================================ */
+
+/* 封面兜底底色（没图时也不会难看） */
+.game-card__cover{
+  background: linear-gradient(135deg, #22262e, #3a4150 60%, #565f70);
+}
+
+/* 封面图：铺满、裁切 */
+.game-card__cover-img{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 底部渐隐，让品牌标识更清楚 */
+.game-card__cover::after{
+  content: "";
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 54%;
+  background: linear-gradient(to top, rgba(8,9,13,.58), rgba(8,9,13,0));
+  pointer-events: none;
+}
+
+/* 引擎标签压在渐隐层之上 */
+.game-card__badge{ z-index: 2; }
+
+/* 发行商徽标 GOBAgame */
+.game-card__brand{
+  position: absolute;
+  right: 10px;
+  bottom: 9px;
+  z-index: 2;
+  line-height: 0;
+  padding: 4px 8px 5px;
+  border-radius: 5px;
+  background: rgba(10,11,15,.45);
+  border: 1px solid rgba(255,255,255,.14);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+.game-card__brand img{
+  display: block;
+  height: 11px;
+  width: auto;
+}
+
+/* 页头品牌标识 */
+.logo__img{
+  display: block;
+  height: 24px;
+  width: auto;
+}
+@media (max-width: 560px){
+  .logo__img{ height: 20px; }
+}
+
+/* 游戏页启动时的品牌闪屏样式是内联注入的（游戏页不加载本文件） */
+

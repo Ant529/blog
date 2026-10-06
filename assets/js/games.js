@@ -41,10 +41,31 @@
       // 封面区
       var cover = document.createElement('div');
       cover.className = 'game-card__cover';
+
+      // 封面图
+      if (g.cover) {
+        var img = document.createElement('img');
+        img.className = 'game-card__cover-img';
+        img.src = encodePath(g.cover);
+        img.alt = g.title || '';
+        img.loading = 'lazy';
+        cover.appendChild(img);
+      }
+
+      // 引擎标签（左上）
       var badge = document.createElement('span');
       badge.className = 'game-card__badge';
-      badge.textContent = 'GODOT';
+      badge.textContent = g.engine || 'GAME';
       cover.appendChild(badge);
+
+      // 发行商徽标 GOBAgame（右下）
+      var brand = document.createElement('span');
+      brand.className = 'game-card__brand';
+      var brandImg = document.createElement('img');
+      brandImg.src = 'assets/img/gobagame-white.png';
+      brandImg.alt = 'GOBAgame';
+      brand.appendChild(brandImg);
+      cover.appendChild(brand);
 
       // 信息区
       var body = document.createElement('div');
