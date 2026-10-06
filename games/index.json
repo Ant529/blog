@@ -6,7 +6,6 @@
     "apk": "jungle-rush/jungle-rush.apk",
     "apkSize": 32565649,
     "addedAt": "2026-10-06T10:15:00.000Z",
-    "cover": "assets/img/covers/jungle-rush.png?v=e89210c6",
     "engine": "GODOT"
   },
   {
@@ -14,7 +13,6 @@
     "title": "消消乐 · Match-3",
     "size": 38991708,
     "addedAt": "2026-10-06T00:30:00.000Z",
-    "cover": "assets/img/covers/match3.png?v=5c8848d8",
     "engine": "GODOT"
   },
   {
@@ -22,7 +20,6 @@
     "title": "暗室 · DARKROOM",
     "size": 23289,
     "addedAt": "2026-10-06T07:50:00.000Z",
-    "cover": "assets/img/covers/darkroom.png?v=81394917",
     "engine": "HTML5"
   },
   {
@@ -30,7 +27,6 @@
     "title": "ORBITAL · 星环",
     "size": 12359,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/orbital.png?v=24129f82",
     "engine": "HTML5"
   },
   {
@@ -38,7 +34,6 @@
     "title": "NEON DRIFT · 霓虹漂移",
     "size": 11919,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/neon-drift.png?v=4f73ac4d",
     "engine": "HTML5"
   },
   {
@@ -46,7 +41,6 @@
     "title": "LUMEN · 光链",
     "size": 12797,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/lumen.png?v=63822d62",
     "engine": "HTML5"
   },
   {
@@ -56,7 +50,6 @@
     "apk": "giant-ant/giant-ant.apk",
     "apkSize": 32849774,
     "addedAt": "2026-10-05T10:47:00.000Z",
-    "cover": "assets/img/covers/giant-ant.png?v=c5f635e9",
     "engine": "GODOT"
   },
   {
@@ -64,7 +57,6 @@
     "title": "像素突击",
     "size": 42859905,
     "addedAt": "2026-10-05T09:22:00.000Z",
-    "cover": "assets/img/covers/pixel-strike.png?v=aea209c9",
     "engine": "GODOT"
   }
 ]

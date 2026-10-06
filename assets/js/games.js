@@ -42,7 +42,8 @@
       var cover = document.createElement('div');
       cover.className = 'game-card__cover';
 
-      // 封面图
+      // 封面图（按用户要求已移除：不再放游戏截图，只留 GOBAgame 品牌）
+      // 若清单里仍带 cover 字段则照常渲染，方便以后想加回来
       if (g.cover) {
         var img = document.createElement('img');
         img.className = 'game-card__cover-img';
@@ -50,6 +51,13 @@
         img.alt = g.title || '';
         img.loading = 'lazy';
         cover.appendChild(img);
+      } else {
+        cover.className += ' game-card__cover--brand';
+        var mark = document.createElement('img');
+        mark.className = 'game-card__mark';
+        mark.src = 'assets/img/gobagame-white.png';
+        mark.alt = 'GOBAgame';
+        cover.appendChild(mark);
       }
 
       // 引擎标签（左上）
@@ -58,14 +66,16 @@
       badge.textContent = g.engine || 'GAME';
       cover.appendChild(badge);
 
-      // 发行商徽标 GOBAgame（右下）
-      var brand = document.createElement('span');
-      brand.className = 'game-card__brand';
-      var brandImg = document.createElement('img');
-      brandImg.src = 'assets/img/gobagame-white.png';
-      brandImg.alt = 'GOBAgame';
-      brand.appendChild(brandImg);
-      cover.appendChild(brand);
+      // 发行商徽标 GOBAgame（右下）—— 只在有封面图时叠加，避免和中央 logo 重复
+      if (g.cover) {
+        var brand = document.createElement('span');
+        brand.className = 'game-card__brand';
+        var brandImg = document.createElement('img');
+        brandImg.src = 'assets/img/gobagame-white.png';
+        brandImg.alt = 'GOBAgame';
+        brand.appendChild(brandImg);
+        cover.appendChild(brand);
+      }
 
       // 信息区
       var body = document.createElement('div');

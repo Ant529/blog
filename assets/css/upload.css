@@ -482,6 +482,25 @@
   width: auto;
 }
 
+/* 无封面图时的品牌面板：只用 GOBAgame 标识，不放游戏截图 */
+.game-card__cover--brand{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(120% 130% at 16% 0%, rgba(255,255,255,.10), rgba(255,255,255,0) 58%),
+    linear-gradient(135deg, #1d212a, #333a47 55%, #4b5361);
+}
+.game-card__cover--brand .game-card__mark{
+  display: block;
+  width: min(48%, 158px);
+  height: auto;
+  opacity: .9;
+  filter: drop-shadow(0 2px 12px rgba(0,0,0,.4));
+}
+/* 品牌面板不需要底部渐隐（那是给封面图压字的） */
+.game-card__cover--brand::after{ display: none; }
+
 /* 页头品牌标识 */
 .logo__img{
   display: block;
