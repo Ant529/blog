@@ -127,9 +127,13 @@
    */
   function encodePath(p) {
     if (!p) return '';
-    return String(p).split('/').map(function (seg) {
+    // 保留 ?query —— 封面用 "xx.png?v=<hash>" 做缓存刷新，
+    // 若整串 encodeURIComponent 会变成 "xx.png%3Fv%3D..." → 404。
+    var parts = String(p).split('?');
+    var path = parts[0].split('/').map(function (seg) {
       return encodeURIComponent(seg);
     }).join('/');
+    return parts.length > 1 ? path + '?' + parts.slice(1).join('?') : path;
   }
 
   function formatSize(bytes) {

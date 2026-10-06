@@ -6,65 +6,65 @@
     "apk": "jungle-rush/jungle-rush.apk",
     "apkSize": 32565649,
     "addedAt": "2026-10-06T10:15:00.000Z",
-    "cover": "assets/img/covers/jungle-rush.png",
+    "cover": "assets/img/covers/jungle-rush.png?v=e89210c6",
     "engine": "GODOT"
   },
   {
     "file": "match3/index.html",
     "title": "消消乐 · Match-3",
-    "size": 5451,
+    "size": 38991708,
     "addedAt": "2026-10-06T00:30:00.000Z",
-    "cover": "assets/img/covers/match3.png",
+    "cover": "assets/img/covers/match3.png?v=5c8848d8",
     "engine": "GODOT"
   },
   {
     "file": "pixel-puzzle/index.html",
     "title": "暗室 · DARKROOM",
-    "size": 23290,
+    "size": 23289,
     "addedAt": "2026-10-06T07:50:00.000Z",
-    "cover": "assets/img/covers/darkroom.png",
+    "cover": "assets/img/covers/darkroom.png?v=81394917",
     "engine": "HTML5"
   },
   {
     "file": "orbital/index.html",
     "title": "ORBITAL · 星环",
-    "size": 11569,
+    "size": 12359,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/orbital.png",
+    "cover": "assets/img/covers/orbital.png?v=24129f82",
     "engine": "HTML5"
   },
   {
     "file": "neon-drift/index.html",
     "title": "NEON DRIFT · 霓虹漂移",
-    "size": 11151,
+    "size": 11919,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/neon-drift.png",
+    "cover": "assets/img/covers/neon-drift.png?v=4f73ac4d",
     "engine": "HTML5"
   },
   {
     "file": "lumen/index.html",
     "title": "LUMEN · 光链",
-    "size": 12019,
+    "size": 12797,
     "addedAt": "2026-10-05T14:10:00.000Z",
-    "cover": "assets/img/covers/lumen.png",
+    "cover": "assets/img/covers/lumen.png?v=63822d62",
     "engine": "HTML5"
   },
   {
     "file": "giant-ant/index.html",
     "title": "进击的巨蚁",
-    "size": 42851403,
+    "size": 42852098,
     "apk": "giant-ant/giant-ant.apk",
     "apkSize": 32849774,
     "addedAt": "2026-10-05T10:47:00.000Z",
-    "cover": "assets/img/covers/giant-ant.png",
+    "cover": "assets/img/covers/giant-ant.png?v=c5f635e9",
     "engine": "GODOT"
   },
   {
     "file": "pixel-strike/index.html",
     "title": "像素突击",
-    "size": 42528305,
+    "size": 42859905,
     "addedAt": "2026-10-05T09:22:00.000Z",
-    "cover": "assets/img/covers/pixel-strike.png",
+    "cover": "assets/img/covers/pixel-strike.png?v=aea209c9",
     "engine": "GODOT"
   }
 ]
