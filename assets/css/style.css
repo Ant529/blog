@@ -147,6 +147,14 @@ button{
   justify-content: center;
 }
 
+/* 卡片操作区：多个按钮并排 */
+.game-card__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
 /* 分类标签 */
 .tag{
   display: inline-block;
@@ -333,12 +341,20 @@ button{
 
 
 /* ============================================================
-   06. 主体两栏布局
+   06. 主体布局
    ============================================================ */
+
+/* 两栏布局（主内容 + 侧边栏）
+   注意：侧边栏已移除，此规则保留供后续有需要时复用 */
 .layout{
   display: grid;
   grid-template-columns: minmax(0, 1fr) var(--sidebar-w);
   gap: 56px;
+  padding: 44px 0 72px;
+}
+
+/* 单栏内容区（当前首页使用）：通宽 + 上下留白 */
+.page-body{
   padding: 44px 0 72px;
 }
 
