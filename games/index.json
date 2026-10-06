@@ -1,14 +1,5 @@
 [
   {
-    "file": "jungle-rush/index.html",
-    "title": "丛林突击 · JUNGLE RUSH",
-    "size": 42588022,
-    "apk": "jungle-rush/jungle-rush.apk",
-    "apkSize": 32565649,
-    "addedAt": "2026-10-06T10:15:00.000Z",
-    "engine": "GODOT"
-  },
-  {
     "file": "match3/index.html",
     "title": "消消乐 · Match-3",
     "size": 38991708,
