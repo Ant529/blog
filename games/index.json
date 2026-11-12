@@ -1,16 +1,8 @@
 [
  {
-  "file": "all-in-one.html",
-  "title": "全部游戏 · 单文件版",
-  "size": 39316914,
-  "addedAt": "2026-11-12T13:20:00.000Z",
-  "engine": "HTML5",
-  "download": true
- },
- {
   "file": "rogue/index.html",
   "title": "打爆他们的脑阔 · 深渊回响",
-  "size": 1240423,
+  "size": 557784,
   "addedAt": "2026-10-07T05:10:00.000Z",
   "engine": "HTML5"
  },
