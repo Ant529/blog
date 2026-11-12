@@ -100,9 +100,16 @@
       play.className = 'btn';
       // 按路径段编码：encodeURIComponent 会把 "/" 也编成 %2F，导致 404
       play.href = 'games/' + encodePath(g.file);
-      play.target = '_blank';
-      play.rel = 'noopener';
-      play.textContent = '开始游戏';
+      if (g.download) {
+        // 离线包（37MB 级）：在页面里直接打开会卡十几分钟，改成下载
+        play.setAttribute('download', '');
+        play.textContent = '下载';
+        play.title = '下载到本地后双击就能玩，不用联网';
+      } else {
+        play.target = '_blank';
+        play.rel = 'noopener';
+        play.textContent = '开始游戏';
+      }
 
       actions.appendChild(play);
 
